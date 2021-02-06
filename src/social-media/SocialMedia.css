@@ -1,0 +1,9 @@
+.social-media-icons{
+    font-size: 100px;
+    color: white;
+}
+
+.social-media-icons:hover { 
+    font-size: 110px;
+}
+
