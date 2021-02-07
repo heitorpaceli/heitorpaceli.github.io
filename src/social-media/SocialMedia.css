@@ -1,9 +1,13 @@
 .social-media-icons{
     font-size: 100px;
     color: white;
+    width: 100%;
 }
 
-.social-media-icons:hover { 
-    font-size: 110px;
+.old-page-link{
+    font-size: 15px;
 }
 
+.old-page-link>a{
+    color: lightseagreen;
+}

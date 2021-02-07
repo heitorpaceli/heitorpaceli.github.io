@@ -1,20 +1,23 @@
 .App {
   text-align: center;
-}
-
-.App-header {
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  align-items: center;
+}
+.messages{
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: #4fc289;
+  font-size: calc(10px + 4vmin);
 }
 
-.social-media-area{
-   position: absolute;
-   padding-bottom: 12vh;
-   bottom: 0;
+.messages-content{
+  margin: 0 auto;
 }

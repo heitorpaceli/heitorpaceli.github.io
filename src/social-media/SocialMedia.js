@@ -6,20 +6,23 @@ import './SocialMedia.css';
 
 function SocialMedia() {
     return (
-        <div className="social-media-icons">
-            <Grid container spacing={6}>
-                <Grid item xs={12} sm={6}>
-                    <a href="https://github.com/heitorpaceli" target="_blank">
-                        <FaGithub className='social-media-icons' />
-                    </a>
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                    <a href="https://linkedin.com/in/heitorpaceli" target="_blank">
-                        <FaLinkedin className='social-media-icons' />
-                    </a>
-                </Grid>
+        <Grid container className="social-media-icons" spacing={1}>
+            <Grid item xs={12} sm={6}>
+                <a href="https://github.com/heitorpaceli" target="_blank">
+                    <FaGithub className='social-media-icons' />
+                </a>
             </Grid>
-        </div>
+            <Grid item xs={12} sm={6}>
+                <a href="https://linkedin.com/in/heitorpaceli" target="_blank">
+                    <FaLinkedin className='social-media-icons' />
+                </a>
+            </Grid>
+            <Grid item xs={12} sm={12} className="old-page-link">
+                Or at my old page <a href="https://sites.google.com/site/heitorpaceli" target="_blank">
+                    https://sites.google.com/site/heitorpaceli
+                </a>
+            </Grid>
+        </Grid>
     );
 }
 
