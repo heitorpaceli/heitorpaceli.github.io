@@ -6,7 +6,7 @@ import './SocialMedia.css';
 
 function SocialMedia() {
     return (
-        <Grid container className="social-media-icons" spacing={1}>
+        <Grid container spacing={1}>
             <Grid item xs={12} sm={6}>
                 <a href="https://github.com/heitorpaceli" target="_blank">
                     <FaGithub className='social-media-icons' />
