@@ -1,0 +1,26 @@
+.social-media-items {
+  height: 100%;
+}
+
+a {
+  color: #EEEEEE;
+  text-decoration: none;
+}
+
+
+.social-media-item:hover {
+  filter: brightness(50%);
+}
+
+.social-media-icons {
+  font-size: 75px;
+}
+
+.old-page-link {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.old-page-link > a {
+  color: lightseagreen;
+}

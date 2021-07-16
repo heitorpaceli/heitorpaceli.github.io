@@ -1,0 +1,7 @@
+.blog-post-card {
+  height: 25vh;
+}
+
+.blog-post-card:hover {
+  filter: brightness(50%);
+}
