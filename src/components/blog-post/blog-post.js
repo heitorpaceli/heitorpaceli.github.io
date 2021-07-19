@@ -28,10 +28,12 @@ export default function RecentPost(props) {
           </Grid>
           <Grid item xs={8} sm={8}>
             <CardContent>
-              <Typography component="h6" variant="h6">
-                {props.post.title}
-              </Typography>
-              <Typography variant="subtitle1" color="textSecondary">
+              <div className="post-title">
+                <Typography component="h6" variant="h6">
+                  {props.post.title}
+                </Typography>
+              </div>
+              <Typography variant="subtitle2" color="textSecondary">
                 {props.post.date}
               </Typography>
             </CardContent>

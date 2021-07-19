@@ -5,3 +5,13 @@
 .blog-post-card:hover {
   filter: brightness(50%);
 }
+
+.post-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 1.5em;
+  max-height: 4em;
+}

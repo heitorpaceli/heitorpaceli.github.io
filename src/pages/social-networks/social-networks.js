@@ -51,9 +51,10 @@ function SocialMedia() {
       justify="center"
       alignItems="center"
       className="social-media-items"
+      spacing={3}
     >
       {media.map((item) => (
-        <Grid item sm={12} md={4} key={item.site} className="social-media-item">
+        <Grid item xs={12} md={4} key={item.site} className="social-media-item">
           <Grid container direction="row" justify="center" alignItems="center">
             <a href={item.url} target="_blank">
               <Grid item xs={12} className="social-media-icons">
