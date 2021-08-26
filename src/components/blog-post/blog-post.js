@@ -34,7 +34,7 @@ export default function RecentPost(props) {
                 </Typography>
               </div>
               <Typography variant="subtitle2" color="textSecondary">
-                {props.post.date}
+                {props.post.date.toLocaleDateString('en-US')}
               </Typography>
             </CardContent>
           </Grid>
