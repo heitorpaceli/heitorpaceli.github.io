@@ -4,13 +4,20 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { Tooltip } from "@mui/material";
+import { Button, Tooltip } from "@mui/material";
+import { format } from "date-fns";
 
 export default function RecentArticle(props) {
   const { article } = props;
+
   return (
     <Tooltip title={article.title} placement="top-start" arrow>
-      <a href={article.link} target="_blank" rel="noopener noreferrer">
+      <Button
+        href={article.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        sx={{ textTransform: "none" }}
+      >
         <Card
           sx={{
             height: 290,
@@ -44,11 +51,11 @@ export default function RecentArticle(props) {
           </CardContent>
           <CardActions>
             <Typography variant="body2" color="text.primary">
-              {article.date.toLocaleString()}
+              {format(article.date, "MMM dd, yyyy")}
             </Typography>
           </CardActions>
         </Card>
-      </a>
+      </Button>
     </Tooltip>
   );
 }

@@ -10,7 +10,8 @@ export async function getBlogPosts() {
           title: post.title,
           image: post.thumbnail,
           link: post.link,
-          date: new Date(post.pubDate),
+          // Change to ISO format before, otherwise won't work in Safari
+          date: new Date(post.pubDate.replace(" ", "T")),
           description: post.description,
         };
       })
