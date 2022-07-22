@@ -1,22 +1,18 @@
-import { createMuiTheme } from "@material-ui/core/styles";
-export const theme = createMuiTheme({
+import { createTheme } from "@mui/material/styles";
+
+export const theme = createTheme({
   palette: {
     common: { black: "#000", white: "#fff" },
     background: {
-      paper: "rgba(57, 62, 70, 1)",
-      default: "rgba(35, 41, 49, 1)",
+      paper: "#F6F6F6",
+      default: "#fff",
+      dark: "#354259",
     },
     primary: {
-      light: "rgba(238, 238, 238, 1)",
-      main: "rgba(78, 204, 163, 1)",
-      dark: "rgba(39, 99, 79, 1)",
-      contrastText: "rgba(0, 0, 0, 1)",
+      main: "#0078aa",
     },
     secondary: {
-      light: "rgba(0, 84, 179, 1)",
-      main: "rgba(1, 45, 95, 1)",
-      dark: "rgba(0, 19, 41, 1)",
-      contrastText: "#fff",
+      main: "#FDF6EC",
     },
     error: {
       light: "#e57373",
@@ -25,8 +21,8 @@ export const theme = createMuiTheme({
       contrastText: "#fff",
     },
     text: {
-      primary: "rgba(238, 238, 238, 1)",
-      secondary: "rgba(238, 238, 238, 0.54)",
+      primary: "#000",
+      secondary: "#FDF6EC",
       disabled: "rgba(74, 74, 74, 1)",
       hint: "rgba(0, 0, 0, 0.38)",
     },

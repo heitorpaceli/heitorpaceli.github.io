@@ -1,0 +1,6 @@
+.profile-picture {
+    border: solid 1em lightgray;
+    border-radius: 50%;
+    max-height: 30vh;
+    min-height: 20vh;
+}
