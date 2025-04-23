@@ -19,7 +19,24 @@ export default function RecentArticles() {
   }, []);
 
   useEffect(() => {
-    setVisiblePosts(posts.filter((post, index) => index < 3));
+    posts.sort((p1, p2) => {
+      if (p1.disabled && p2.disabled) {
+        return 0
+      } else if (p1.disabled) {
+        return 1
+      } else {
+        return -1
+      }
+    })
+    const maxRecent = 3
+    const availablePosts = posts.filter((post, index) =>
+      index < maxRecent && !post.disabled
+    )
+    if (availablePosts.length > 0) {
+      setVisiblePosts(availablePosts);
+    } else {
+      setVisiblePosts(posts.filter((post, index) => index < maxRecent));
+    }
   }, [posts, setVisiblePosts]);
 
   const seeAllPosts = () => setVisiblePosts(posts);

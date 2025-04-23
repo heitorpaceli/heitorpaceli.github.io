@@ -2,16 +2,21 @@ import * as React from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, Tooltip } from "@mui/material";
 import { format } from "date-fns";
+import ArticleCardMedia from "./article-card-media";
 
 export default function RecentArticle(props) {
   const { article } = props;
 
   return (
-    <Tooltip title={article.title} placement="top-start" arrow>
+    <Tooltip title={
+      article.disabled ?
+        `${article.title} - NOTE: Website has been disabled/discontinued and article may no longer be accessible.` :
+        article.title
+    }
+      placement="top-start" arrow>
       <Button
         href={article.link}
         target="_blank"
@@ -25,15 +30,11 @@ export default function RecentArticle(props) {
             "&:hover": {
               filter: "brightness(0.8)",
             },
+            filter: article.disabled ? "brightness(0.3)" : "brightness(1)"
           }}
           elevation={5}
         >
-          <CardMedia
-            component="img"
-            height="140"
-            image={article.image}
-            alt="article featuring image"
-          />
+          <ArticleCardMedia article={article} />
           <CardContent>
             <Typography
               gutterBottom
